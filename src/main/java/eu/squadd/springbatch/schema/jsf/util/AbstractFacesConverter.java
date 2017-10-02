@@ -30,13 +30,13 @@ public abstract class AbstractFacesConverter implements Converter {
         return controller.getItemById(getKey(value));
     }
 
-    Long getKey(String value) {
+    protected Long getKey(String value) {
         java.lang.Long key;
         key = Long.valueOf(value);
         return key;
     }
 
-    String getStringKey(Long value) {
+    protected String getStringKey(Long value) {
         StringBuilder sb = new StringBuilder();
         sb.append(value);
         return sb.toString();

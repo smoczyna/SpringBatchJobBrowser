@@ -2,6 +2,7 @@ package eu.squadd.springbatch.schema.jsf;
 
 import eu.squadd.springbatch.schema.BatchStepExecution;
 import eu.squadd.springbatch.schema.ejb.BatchStepExecutionFacade;
+import eu.squadd.springbatch.schema.jsf.util.AbstractFacesConverter;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -10,7 +11,6 @@ import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
-import javax.faces.convert.Converter;
 import javax.faces.convert.FacesConverter;
 
 @Named("batchStepExecutionController")
@@ -36,30 +36,12 @@ public class BatchStepExecutionController extends AbstractController<BatchStepEx
     }
 
     @FacesConverter(forClass = BatchStepExecution.class)
-    public static class BatchStepExecutionControllerConverter implements Converter {
+    public static class BatchStepExecutionControllerConverter extends AbstractFacesConverter {
 
-        @Override
-        public Object getAsObject(FacesContext facesContext, UIComponent component, String value) {
-            if (value == null || value.length() == 0) {
-                return null;
-            }
-            BatchStepExecutionController controller = (BatchStepExecutionController) facesContext.getApplication().getELResolver().
-                    getValue(facesContext.getELContext(), null, "batchStepExecutionController");
-            return controller.getItemById(getKey(value));
+        public BatchStepExecutionControllerConverter() {
+            super("batchStepExecutionController");
         }
-
-        java.lang.Long getKey(String value) {
-            java.lang.Long key;
-            key = Long.valueOf(value);
-            return key;
-        }
-
-        String getStringKey(java.lang.Long value) {
-            StringBuilder sb = new StringBuilder();
-            sb.append(value);
-            return sb.toString();
-        }
-
+        
         @Override
         public String getAsString(FacesContext facesContext, UIComponent component, Object object) {
             if (object == null) {

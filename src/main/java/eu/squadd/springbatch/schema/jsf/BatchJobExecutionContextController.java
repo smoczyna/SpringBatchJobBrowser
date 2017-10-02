@@ -2,6 +2,7 @@ package eu.squadd.springbatch.schema.jsf;
 
 import eu.squadd.springbatch.schema.BatchJobExecutionContext;
 import eu.squadd.springbatch.schema.ejb.BatchJobExecutionContextFacade;
+import eu.squadd.springbatch.schema.jsf.util.AbstractFacesConverter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.ejb.EJB;
@@ -9,7 +10,6 @@ import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
-import javax.faces.convert.Converter;
 import javax.faces.convert.FacesConverter;
 
 @Named("batchJobExecutionContextController")
@@ -35,30 +35,12 @@ public class BatchJobExecutionContextController extends AbstractController<Batch
     }
 
     @FacesConverter(forClass = BatchJobExecutionContext.class)
-    public static class BatchJobExecutionContextControllerConverter implements Converter {
+    public static class BatchJobExecutionContextControllerConverter extends AbstractFacesConverter {
 
-        @Override
-        public Object getAsObject(FacesContext facesContext, UIComponent component, String value) {
-            if (value == null || value.length() == 0) {
-                return null;
-            }
-            BatchJobExecutionContextController controller = (BatchJobExecutionContextController) facesContext.getApplication().getELResolver().
-                    getValue(facesContext.getELContext(), null, "batchJobExecutionContextController");
-            return controller.getItemById(getKey(value));
+        public BatchJobExecutionContextControllerConverter() {
+            super("batchJobExecutionContextController");
         }
-
-        java.lang.Long getKey(String value) {
-            java.lang.Long key;
-            key = Long.valueOf(value);
-            return key;
-        }
-
-        String getStringKey(java.lang.Long value) {
-            StringBuilder sb = new StringBuilder();
-            sb.append(value);
-            return sb.toString();
-        }
-
+        
         @Override
         public String getAsString(FacesContext facesContext, UIComponent component, Object object) {
             if (object == null) {

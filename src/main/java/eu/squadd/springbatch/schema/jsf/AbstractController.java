@@ -103,5 +103,4 @@ public abstract class AbstractController<T> implements Serializable {
     public List<T> getItemsAvailableSelectOne() {
         return getFacade().findAll();
     }
-
 }
