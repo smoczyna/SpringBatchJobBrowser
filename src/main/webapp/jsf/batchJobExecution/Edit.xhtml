@@ -17,11 +17,11 @@
                         <p:outputLabel value="#{bundle.EditBatchJobExecutionLabel_version}" for="version" />
                         <p:inputText id="version" value="#{batchJobExecutionController.selected.version}" title="#{bundle.EditBatchJobExecutionTitle_version}" />
                         <p:outputLabel value="#{bundle.EditBatchJobExecutionLabel_createTime}" for="createTime" />
-                        <p:calendar id="createTime" pattern="MM/dd/yyyy HH:mm:ss" value="#{batchJobExecutionController.selected.createTime}" title="#{bundle.EditBatchJobExecutionTitle_createTime}" required="true" requiredMessage="#{bundle.EditBatchJobExecutionRequiredMessage_createTime}" showOn="button"/>
+                        <p:calendar id="createTime" pattern="dd/MM/yyyy HH:mm:ss" value="#{batchJobExecutionController.selected.createTime}" title="#{bundle.EditBatchJobExecutionTitle_createTime}" required="true" requiredMessage="#{bundle.EditBatchJobExecutionRequiredMessage_createTime}" showOn="button"/>
                         <p:outputLabel value="#{bundle.EditBatchJobExecutionLabel_startTime}" for="startTime" />
-                        <p:calendar id="startTime" pattern="MM/dd/yyyy HH:mm:ss" value="#{batchJobExecutionController.selected.startTime}" title="#{bundle.EditBatchJobExecutionTitle_startTime}"  showOn="button"/>
+                        <p:calendar id="startTime" pattern="dd/MM/yyyy HH:mm:ss" value="#{batchJobExecutionController.selected.startTime}" title="#{bundle.EditBatchJobExecutionTitle_startTime}"  showOn="button"/>
                         <p:outputLabel value="#{bundle.EditBatchJobExecutionLabel_endTime}" for="endTime" />
-                        <p:calendar id="endTime" pattern="MM/dd/yyyy HH:mm:ss" value="#{batchJobExecutionController.selected.endTime}" title="#{bundle.EditBatchJobExecutionTitle_endTime}"  showOn="button"/>
+                        <p:calendar id="endTime" pattern="dd/MM/yyyy HH:mm:ss" value="#{batchJobExecutionController.selected.endTime}" title="#{bundle.EditBatchJobExecutionTitle_endTime}"  showOn="button"/>
                         <p:outputLabel value="#{bundle.EditBatchJobExecutionLabel_status}" for="status" />
                         <p:inputText id="status" value="#{batchJobExecutionController.selected.status}" title="#{bundle.EditBatchJobExecutionTitle_status}" />
                         <p:outputLabel value="#{bundle.EditBatchJobExecutionLabel_exitCode}" for="exitCode" />
@@ -29,7 +29,7 @@
                         <p:outputLabel value="#{bundle.EditBatchJobExecutionLabel_exitMessage}" for="exitMessage" />
                         <p:inputText id="exitMessage" value="#{batchJobExecutionController.selected.exitMessage}" title="#{bundle.EditBatchJobExecutionTitle_exitMessage}" />
                         <p:outputLabel value="#{bundle.EditBatchJobExecutionLabel_lastUpdated}" for="lastUpdated" />
-                        <p:calendar id="lastUpdated" pattern="MM/dd/yyyy HH:mm:ss" value="#{batchJobExecutionController.selected.lastUpdated}" title="#{bundle.EditBatchJobExecutionTitle_lastUpdated}"  showOn="button"/>
+                        <p:calendar id="lastUpdated" pattern="dd/MM/yyyy HH:mm:ss" value="#{batchJobExecutionController.selected.lastUpdated}" title="#{bundle.EditBatchJobExecutionTitle_lastUpdated}"  showOn="button"/>
                         <p:outputLabel value="#{bundle.EditBatchJobExecutionLabel_jobConfigurationLocation}" for="jobConfigurationLocation" />
                         <p:inputText id="jobConfigurationLocation" value="#{batchJobExecutionController.selected.jobConfigurationLocation}" title="#{bundle.EditBatchJobExecutionTitle_jobConfigurationLocation}" />
                         <p:outputLabel value="#{bundle.EditBatchJobExecutionLabel_batchJobExecutionContext}" for="batchJobExecutionContext" />

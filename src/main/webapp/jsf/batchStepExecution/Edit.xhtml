@@ -19,9 +19,9 @@
                         <p:outputLabel value="#{bundle.EditBatchStepExecutionLabel_stepName}" for="stepName" />
                         <p:inputText id="stepName" value="#{batchStepExecutionController.selected.stepName}" title="#{bundle.EditBatchStepExecutionTitle_stepName}" required="true" requiredMessage="#{bundle.EditBatchStepExecutionRequiredMessage_stepName}"/>
                         <p:outputLabel value="#{bundle.EditBatchStepExecutionLabel_startTime}" for="startTime" />
-                        <p:calendar id="startTime" pattern="MM/dd/yyyy HH:mm:ss" value="#{batchStepExecutionController.selected.startTime}" title="#{bundle.EditBatchStepExecutionTitle_startTime}" required="true" requiredMessage="#{bundle.EditBatchStepExecutionRequiredMessage_startTime}" showOn="button"/>
+                        <p:calendar id="startTime" pattern="dd/MM/yyyy HH:mm:ss" value="#{batchStepExecutionController.selected.startTime}" title="#{bundle.EditBatchStepExecutionTitle_startTime}" required="true" requiredMessage="#{bundle.EditBatchStepExecutionRequiredMessage_startTime}" showOn="button"/>
                         <p:outputLabel value="#{bundle.EditBatchStepExecutionLabel_endTime}" for="endTime" />
-                        <p:calendar id="endTime" pattern="MM/dd/yyyy HH:mm:ss" value="#{batchStepExecutionController.selected.endTime}" title="#{bundle.EditBatchStepExecutionTitle_endTime}"  showOn="button"/>
+                        <p:calendar id="endTime" pattern="dd/MM/yyyy HH:mm:ss" value="#{batchStepExecutionController.selected.endTime}" title="#{bundle.EditBatchStepExecutionTitle_endTime}"  showOn="button"/>
                         <p:outputLabel value="#{bundle.EditBatchStepExecutionLabel_status}" for="status" />
                         <p:inputText id="status" value="#{batchStepExecutionController.selected.status}" title="#{bundle.EditBatchStepExecutionTitle_status}" />
                         <p:outputLabel value="#{bundle.EditBatchStepExecutionLabel_commitCount}" for="commitCount" />
@@ -45,7 +45,7 @@
                         <p:outputLabel value="#{bundle.EditBatchStepExecutionLabel_exitMessage}" for="exitMessage" />
                         <p:inputText id="exitMessage" value="#{batchStepExecutionController.selected.exitMessage}" title="#{bundle.EditBatchStepExecutionTitle_exitMessage}" />
                         <p:outputLabel value="#{bundle.EditBatchStepExecutionLabel_lastUpdated}" for="lastUpdated" />
-                        <p:calendar id="lastUpdated" pattern="MM/dd/yyyy HH:mm:ss" value="#{batchStepExecutionController.selected.lastUpdated}" title="#{bundle.EditBatchStepExecutionTitle_lastUpdated}"  showOn="button"/>
+                        <p:calendar id="lastUpdated" pattern="dd/MM/yyyy HH:mm:ss" value="#{batchStepExecutionController.selected.lastUpdated}" title="#{bundle.EditBatchStepExecutionTitle_lastUpdated}"  showOn="button"/>
                         <p:outputLabel value="#{bundle.EditBatchStepExecutionLabel_jobExecutionId}" for="jobExecutionId" />
                         <p:selectOneMenu id="jobExecutionId" value="#{batchStepExecutionController.selected.jobExecutionId}" required="true" requiredMessage="#{bundle.EditBatchStepExecutionRequiredMessage_jobExecutionId}">
                             <f:selectItem itemLabel="#{bundle.SelectOneMessage}"/>

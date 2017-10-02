@@ -20,11 +20,11 @@
                         <h:outputText value="#{batchStepExecutionController.selected.stepName}" title="#{bundle.ViewBatchStepExecutionTitle_stepName}"/>
                         <h:outputText value="#{bundle.ViewBatchStepExecutionLabel_startTime}"/>
                         <h:outputText value="#{batchStepExecutionController.selected.startTime}" title="#{bundle.ViewBatchStepExecutionTitle_startTime}">
-                            <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            <f:convertDateTime pattern="dd/MM/yyyy HH:mm:ss" />
                         </h:outputText>
                         <h:outputText value="#{bundle.ViewBatchStepExecutionLabel_endTime}"/>
                         <h:outputText value="#{batchStepExecutionController.selected.endTime}" title="#{bundle.ViewBatchStepExecutionTitle_endTime}">
-                            <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            <f:convertDateTime pattern="dd/MM/yyyy HH:mm:ss" />
                         </h:outputText>
                         <h:outputText value="#{bundle.ViewBatchStepExecutionLabel_status}"/>
                         <h:outputText value="#{batchStepExecutionController.selected.status}" title="#{bundle.ViewBatchStepExecutionTitle_status}"/>
@@ -50,7 +50,7 @@
                         <h:outputText value="#{batchStepExecutionController.selected.exitMessage}" title="#{bundle.ViewBatchStepExecutionTitle_exitMessage}"/>
                         <h:outputText value="#{bundle.ViewBatchStepExecutionLabel_lastUpdated}"/>
                         <h:outputText value="#{batchStepExecutionController.selected.lastUpdated}" title="#{bundle.ViewBatchStepExecutionTitle_lastUpdated}">
-                            <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            <f:convertDateTime pattern="dd/MM/yyyy HH:mm:ss" />
                         </h:outputText>
                         <h:outputText value="#{bundle.ViewBatchStepExecutionLabel_jobExecutionId}"/>
                         <h:outputText value="#{batchStepExecutionController.selected.jobExecutionId}" title="#{bundle.ViewBatchStepExecutionTitle_jobExecutionId}"/>

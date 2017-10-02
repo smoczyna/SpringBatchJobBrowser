@@ -10,9 +10,7 @@
         <h:outputStylesheet library="css" name="jsfcrud.css"/>
         <h:outputScript library="js" name="jsfcrud.js"/>
     </h:head>
-
     <h:body>
-
         <p:growl id="growl" life="3000" />
 
         <p:layout fullPage="true">
@@ -23,12 +21,9 @@
                         <p:submenu label="#{bundle.Maintenance}">
                             <p:menuitem value="BatchJobExecution" outcome="/jsf/batchJobExecution/List.xhtml" />
                             <p:menuitem value="BatchJobExecutionContext" outcome="/jsf/batchJobExecutionContext/List.xhtml" />
-                            <p:menuitem value="BatchJobExecutionSeq" outcome="/jsf/batchJobExecutionSeq/List.xhtml" />
                             <p:menuitem value="BatchJobInstance" outcome="/jsf/batchJobInstance/List.xhtml" />
-                            <p:menuitem value="BatchJobSeq" outcome="/jsf/batchJobSeq/List.xhtml" />
                             <p:menuitem value="BatchStepExecution" outcome="/jsf/batchStepExecution/List.xhtml" />
-                            <p:menuitem value="BatchStepExecutionContext" outcome="/jsf/batchStepExecutionContext/List.xhtml" />
-                            <p:menuitem value="BatchStepExecutionSeq" outcome="/jsf/batchStepExecutionSeq/List.xhtml" />
+                            <p:menuitem value="BatchStepExecutionContext" outcome="/jsf/batchStepExecutionContext/List.xhtml" />                            
                         </p:submenu>
                     </p:menubar>
                 </h:form>
@@ -43,7 +38,5 @@
             </p:layoutUnit>
 
         </p:layout>
-
     </h:body>
-
 </html>
